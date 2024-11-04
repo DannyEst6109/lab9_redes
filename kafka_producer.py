@@ -5,7 +5,7 @@ import time
 
 # Configuración del servidor Kafka
 KAFKA_SERVER = '164.92.76.15:9092'
-TOPIC = '21826'
+TOPIC = '21864'
 
 # Inicialización del productor Kafka
 producer = KafkaProducer(

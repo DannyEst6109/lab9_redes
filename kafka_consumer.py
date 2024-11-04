@@ -5,7 +5,7 @@ from collections import deque
 
 # Configuración del Consumer
 KAFKA_SERVER = '164.92.76.15:9092'
-TOPIC = '21826'
+TOPIC = '21864'
 
 # Configuración para almacenar datos y gráficos en vivo
 all_temp = deque(maxlen=100)
@@ -15,9 +15,10 @@ all_wind = deque(maxlen=100)
 # Configurar el consumidor
 consumer = KafkaConsumer(
     TOPIC,
-    group_id='grupo_consumidor',
+    group_id='grupo_consumidor_nuevo',
     bootstrap_servers=KAFKA_SERVER,
-    value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+    value_deserializer=lambda m: json.loads(m.decode('utf-8')),
+    auto_offset_reset='earliest'
 )
 
 # Inicializar el gráfico

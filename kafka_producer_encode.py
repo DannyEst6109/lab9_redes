@@ -5,7 +5,7 @@ import time
 
 # Configuración del servidor Kafka
 KAFKA_SERVER = '164.92.76.15:9092'
-TOPIC = '21826'
+TOPIC = '21864'
 
 # Diccionario para mapear direcciones del viento a valores de 3 bits
 DIRECCIONES_VIENTO = {
